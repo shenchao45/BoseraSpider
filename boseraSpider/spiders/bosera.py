@@ -14,7 +14,7 @@ class BoseraSpider(scrapy.Spider):
     startDate = (
             datetime.datetime.now() - datetime.timedelta(days=1) - pd.tseries.offsets.DateOffset(months=3)).strftime(
         '%Y-%m-%d')
-   a endDate = datetime.datetime.now().strftime('%Y-%m-%d')
+    endDate = datetime.datetime.now().strftime('%Y-%m-%d')
     url = 'http://www.bosera.com/fund/fundHisDetail.json?pageNo=%s&pageSize=%s&fundCode=000730&startDate=%s&endDate=%s'
     start_urls = [url % (pageNo, pageSize, startDate, endDate)]
 
